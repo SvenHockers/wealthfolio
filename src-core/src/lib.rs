@@ -15,6 +15,7 @@ pub mod schema;
 pub mod settings;
 pub mod secrets;
 pub mod utils;
+pub mod brokers;
 pub use portfolio::*;
 pub use assets::*;
 

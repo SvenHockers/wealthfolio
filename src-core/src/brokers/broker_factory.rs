@@ -2,7 +2,6 @@ use std::sync::Arc;
 
 use crate::accounts::accounts_model::Account;
 use crate::errors::Error;
-use crate::platforms::platforms_model::PlatformSetting;
 use crate::secrets::SecretManager;
 
 use super::broker_provider::BrokerProvider;

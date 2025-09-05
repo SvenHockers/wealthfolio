@@ -1,10 +1,8 @@
 use async_trait::async_trait;
-use chrono::{DateTime, Utc};
 use diesel::prelude::*;
 use rust_decimal::Decimal;
 
 use crate::activities::activities_model::NewActivity;
-use crate::schema::activities::dsl as activities_dsl;
 
 #[derive(Debug, Clone)]
 pub struct ExternalActivity {

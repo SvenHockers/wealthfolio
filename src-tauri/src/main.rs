@@ -148,6 +148,7 @@ pub fn main() {
             commands::brokers::update_broker_platform_settings,
             commands::brokers::platform_set_secrets,
             commands::brokers::platform_has_secrets,
+            commands::brokers::sync_all_accounts,
             commands::secrets::set_secret,
             commands::secrets::get_secret,
             commands::secrets::delete_secret,

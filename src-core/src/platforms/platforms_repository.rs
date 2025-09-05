@@ -7,7 +7,7 @@ use crate::db::{get_connection, WriteHandle};
 use crate::errors::Result;
 use crate::schema::platforms::dsl as platforms_dsl;
 
-use super::platforms_model::{PlatformSetting, UpdatePlatformSetting};
+use super::platforms_model::PlatformSetting;
 
 pub struct PlatformsRepository {
     pool: Arc<Pool<r2d2::ConnectionManager<SqliteConnection>>>,
