@@ -8,6 +8,7 @@ use wealthfolio_core::{
     goals::{GoalRepository, GoalService},
     limits::{ContributionLimitRepository, ContributionLimitService},
     market_data::{MarketDataRepository, MarketDataService, MarketDataServiceTrait},
+    platforms::{platforms_repository::PlatformsRepository, platforms_service::PlatformsService, platforms_traits::PlatformsServiceTrait},
     portfolio::{
         holdings::{HoldingsService, HoldingsValuationService},
         income::IncomeService,
@@ -59,6 +60,8 @@ pub async fn initialize_context(
 
     let market_data_service: Arc<dyn MarketDataServiceTrait> =
         Arc::new(MarketDataService::new(market_data_repo.clone(), asset_repository.clone()).await?);
+    let platforms_repo = Arc::new(PlatformsRepository::new(pool.clone(), writer.clone()));
+    let platforms_service: Arc<dyn PlatformsServiceTrait> = Arc::new(PlatformsService::new(platforms_repo.clone()));
 
     let asset_service = Arc::new(AssetService::new(
         asset_repository.clone(),
@@ -133,6 +136,7 @@ pub async fn initialize_context(
         goal_service,
         market_data_service,
         limits_service,
+        platforms_service,
         fx_service,
         performance_service,
         income_service,
