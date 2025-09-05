@@ -2,6 +2,7 @@ pub mod account;
 pub mod activity;
 pub mod addon;
 pub mod asset;
+pub mod brokers;
 pub mod goal;
 pub mod limits;
 pub mod market_data;
