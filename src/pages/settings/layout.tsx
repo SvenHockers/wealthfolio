@@ -24,6 +24,10 @@ const sidebarNavItems = [
     href: 'market-data',
   },
   {
+    title: 'Broker Integration',
+    href: 'broker-api'
+  },
+  {
     title: 'Add-ons',
     href: 'addons',
   },
