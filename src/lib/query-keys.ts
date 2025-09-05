@@ -49,6 +49,7 @@ export const QueryKeys = {
   // Market Data Providers
   MARKET_DATA_PROVIDERS: 'marketDataProviders',
   MARKET_DATA_PROVIDER_SETTINGS: 'marketDataProviderSettings',
+  BROKER_PLATFORM_SETTINGS: 'brokerPlatformSettings',
 
   transactions: 'transactions',
   latestValuations: 'latest-valuations',
