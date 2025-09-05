@@ -162,6 +162,7 @@ diesel::table! {
         id -> Text,
         name -> Nullable<Text>,
         url -> Text,
+        enabled -> Bool,
     }
 }
 
